@@ -133,7 +133,7 @@ body {
   height: 1px;
   margin: -1px;
   overflow: hidden;
-  padding: 0px;
+  padding: 0;
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -144,15 +144,6 @@ body {
   width: 1158px;
   margin: 0 auto;
   padding: 0px 15px;
-}
-
-.section-bottom {
-  padding-top: 96px;
-  padding-bottom: 120px;
-}
-
-.section-top {
-  padding-top: 120px;
 }
 
 /*-- LOGO --*/
@@ -196,8 +187,9 @@ body {
 
 /* <header */
 .header-container {
-  display: flex;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 /* <nav */
@@ -211,6 +203,9 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  color: var(--color-dark);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
 }
 
 /* <li */
@@ -222,7 +217,7 @@ body {
 }
 
 /* <a href= */
-/* .nav-link {} */
+/*.nav-link {} */
 
 /* <ul */
 .contacts-list {
@@ -266,12 +261,11 @@ body {
   color: var(--color-primary-brand-focus);
 }
 
-/* .nav-list-item:hover::after, */
+/* /* .nav-list-item:hover::after, */
 .current::after {
   content: "";
   position: absolute;
   bottom: 0px;
-  left: 0px;
   width: 100%;
   height: 4px;
   background-color: var(--color-primary-brand);
@@ -429,7 +423,8 @@ body {
   text-align: center;
   background-color: var(--color-primary-background);
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -489,6 +484,9 @@ body {
 /* HOVER EFFECTS TEAM */
 /* <a href= */
 /* .team-list-item:hover .team-social-list-link {} */
+  background-color: var(--color-primary-brand-focus);
+  border: 1px solid var(--color-primary-brand-focus);
+}
 
 /* CUSTOMERS */
 /* <section  */
@@ -558,7 +556,6 @@ body {
 .footer-wrapper {
   display: flex;
 }
-
 /* <div */
 .footer-slogan-wrapper {
   margin-right: 120px;
@@ -634,7 +631,7 @@ body {
 .portfolio-card-wrapper {
   border-top: none;
   border-bottom: 0.5px solid var(--color-light-mode-background);
-  color: var(--color-dark);
+  color: var(--title-color);
   padding: 32px 16px;
 }
 
@@ -678,8 +675,10 @@ body {
 
 /* HOVER EFFECTS PORTFOLIO */
 /* <li */
-/* .portfolio-cards-list-item:hover, */
-/* .portfolio-cards-list-item:focus {} */
+.portfolio-cards-list-item:hover,
+.portfolio-cards-list-item:focus {
+  border: 1px solid var(--color-light-mode-background);
+}
 
 /* <button */
 .decor-btn,
@@ -726,7 +725,7 @@ body {
   left: 0;
   top: 0;
   position: absolute;
-  color: var(--color-primary-background);
+  color: #ffffff;
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 32px;
@@ -764,7 +763,7 @@ transform: translate(-50%, -50%);
 width: 408px;
 height: 576px;
 border-radius: 4px;
-background-color: var(--color-primary-background);
+background-color: rgb(255, 255, 255);
 }
 
 .modal-close-btn {
